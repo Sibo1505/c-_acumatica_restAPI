@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "4/Pe5LFMUo0aF26Y44+AeGmGbk2TW7MXl7N00mYcpqaWNpSdnvG3Z36TCCtJomUbxOIvkbf9iPVdSPRPwj8ksw==",
+  "success": true,
+  "projectFilePath": "H:\\coding\\c#\\c-_acumatica_restAPI\\AcumaticaApiClient\\AcumaticaApiClient.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Sebastian\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\Sebastian\\.nuget\\packages\\restsharp\\112.1.0\\restsharp.112.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}

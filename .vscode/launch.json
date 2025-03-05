@@ -1,0 +1,16 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": ".NET Core Launch (console)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/AcumaticaApiClient/bin/Debug/net6.0/AcumaticaApiClient.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/AcumaticaApiClient",
+            "console": "integratedTerminal",
+            "stopAtEntry": false
+        }
+    ]
+}
