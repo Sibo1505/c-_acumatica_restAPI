@@ -12,34 +12,25 @@ namespace AcumaticaApiClient.UI
             Console.WriteLine("\n=== SOORDER erstellen ===");
 
                 // Kundedaten eingeben
-                Console.Write("Kunden-ID eingeben: ");
-                string customerID = Console.ReadLine();
+                string customerID = CheckInput("Kunden-ID eingeben: ");
+                string description = CheckInput("Beschreibung für den Auftrag: ");
 
-                Console.Write("Beschreibung für den Auftrag: ");
-                string description = Console.ReadLine();
-
-                var salesOrder = new SOOrder
+                return new SOOrder
                 {
                     OrderType = new ValueField { Value = "SO"},
                     CustomerID = new ValueField { Value = customerID},
                     Description = new ValueField { Value = description}
                 };
-
-                return salesOrder;
         }
 
         // Diese Funktion erfasst die Daten für eine Sales Order Position
         public SOOrderDetail GetOrderLineInput()
         {
             Console.WriteLine("\n=== SOLINE hinzufügen ===");
-                Console.Write("Artikelnummer eingeben: ");
-                string inventoryID = Console.ReadLine();
 
-                Console.Write("Menge eingeben: ");
-                string quantity = Console.ReadLine();
-
-                Console.Write("Preis pro Stück: ");
-                string unitPrice = Console.ReadLine();
+                string inventoryID = CheckInput("Artikelnummer eingeben: ");
+                string quantity = CheckInput("Menge eingeben: ");
+                string unitPrice = CheckInput("Preis pro Stück: ");
 
                 return new SOOrderDetail
                 {
@@ -47,6 +38,17 @@ namespace AcumaticaApiClient.UI
                     OrderQty = new ValueField { Value = quantity},
                     UnitPrice = new ValueField { Value = unitPrice}
                 };
+        }
+
+        private string CheckInput(string request)
+        {
+        string input;
+        do
+        {
+            Console.Write(request);
+            input = Console.ReadLine()?.Trim();
+        } while (string.IsNullOrEmpty(input));
+        return input;
         }
     }
 }

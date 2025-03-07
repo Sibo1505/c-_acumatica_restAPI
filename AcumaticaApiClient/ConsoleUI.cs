@@ -11,11 +11,8 @@ namespace AcumaticaApiClient.UI
             Console.WriteLine("\nLogging in...");
 
             // Zugangsdaten
-            Console.Write("Benutzername: ");
-            string username = Console.ReadLine();
-            
-            Console.Write("Passwort: ");
-            string password = Console.ReadLine();
+            string username = GetValidatedInput("Benutzername: ");
+            string password = GetValidatedInput("Passwort: ");
 
             return (username, password);
         }
@@ -23,14 +20,18 @@ namespace AcumaticaApiClient.UI
         // Diese Funktion zeigt an, ob der Login erfolgreich war oder nicht
         public void DisplayLoginResult(bool loginStatus)
         {
-            if (loginStatus)
+            Console.WriteLine(loginStatus ? "Login erfolgreich!" : "Login fehlgeschlagen!");
+        }
+
+        private string GetValidatedInput(string prompt)
+        {
+            string input;
+            do
             {
-                Console.WriteLine("Login erfolgreich!");
-            }
-            else
-            {
-                Console.WriteLine("Login fehlgeschlagen!");
-            }
+                Console.Write(prompt);
+                input = Console.ReadLine()?.Trim();
+            } while (string.IsNullOrEmpty(input));
+            return input;
         }
     }
 }

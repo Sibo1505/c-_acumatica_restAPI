@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "H:\\coding\\c#\\c-_acumatica_restAPI-4\\AcumaticaApiClient\\AcumaticaApiClient.csproj": {}
+    "H:\\coding\\c#\\c-_acumatica_restAPI-5\\AcumaticaApiClient\\AcumaticaApiClient.csproj": {}
   },
   "projects": {
-    "H:\\coding\\c#\\c-_acumatica_restAPI-4\\AcumaticaApiClient\\AcumaticaApiClient.csproj": {
+    "H:\\coding\\c#\\c-_acumatica_restAPI-5\\AcumaticaApiClient\\AcumaticaApiClient.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "H:\\coding\\c#\\c-_acumatica_restAPI-4\\AcumaticaApiClient\\AcumaticaApiClient.csproj",
+        "projectUniqueName": "H:\\coding\\c#\\c-_acumatica_restAPI-5\\AcumaticaApiClient\\AcumaticaApiClient.csproj",
         "projectName": "AcumaticaApiClient",
-        "projectPath": "H:\\coding\\c#\\c-_acumatica_restAPI-4\\AcumaticaApiClient\\AcumaticaApiClient.csproj",
+        "projectPath": "H:\\coding\\c#\\c-_acumatica_restAPI-5\\AcumaticaApiClient\\AcumaticaApiClient.csproj",
         "packagesPath": "C:\\Users\\Sebastian\\.nuget\\packages\\",
-        "outputPath": "H:\\coding\\c#\\c-_acumatica_restAPI-4\\AcumaticaApiClient\\obj\\",
+        "outputPath": "H:\\coding\\c#\\c-_acumatica_restAPI-5\\AcumaticaApiClient\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Sebastian\\AppData\\Roaming\\NuGet\\NuGet.Config"

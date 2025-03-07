@@ -7,7 +7,6 @@ namespace AcumaticaApiClient.Models
     // Diese Klasse definiert die Struktur der Sales Order
     public class SOOrder
     {
-        // OrderType = SO
         [JsonProperty("OrderType")]
         public ValueField OrderType { get; set; } = new ValueField();
 
