@@ -8,6 +8,8 @@ namespace AcumaticaApiClient.UI
     {
         public (string username, string password) GetUserCredentials()
         {
+            Console.WriteLine("\nLogging in...");
+
             // Zugangsdaten
             Console.Write("Benutzername: ");
             string username = Console.ReadLine();

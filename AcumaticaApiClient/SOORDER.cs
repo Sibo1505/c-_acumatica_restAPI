@@ -4,8 +4,10 @@ using Newtonsoft.Json;
 
 namespace AcumaticaApiClient.Models
 {
+    // Diese Klasse definiert die Struktur der Sales Order
     public class SOOrder
     {
+        // OrderType = SO
         [JsonProperty("OrderType")]
         public ValueField OrderType { get; set; } = new ValueField();
 
@@ -22,18 +24,20 @@ namespace AcumaticaApiClient.Models
         public List<SOOrderDetail> Details { get; set; } = new List<SOOrderDetail>();
     }
 
+    // Diese Klasse definiert die Struktur der Sales Order Position
     public class SOOrderDetail
     {
         [JsonProperty("InventoryID")]
         public ValueField InventoryID { get; set; } = new ValueField();
 
-        [JsonProperty("Quantity")]
-        public ValueField Quantity { get; set; } = new ValueField();
+        [JsonProperty("OrderQty")]
+        public ValueField OrderQty { get; set; } = new ValueField();
 
         [JsonProperty("UnitPrice")]
         public ValueField UnitPrice { get; set; } = new ValueField();
     }
 
+    // Diese Klasse definiert die Struktur des ValueFields
     public class ValueField
     {
         [JsonProperty("value")]

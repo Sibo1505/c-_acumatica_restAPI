@@ -18,7 +18,7 @@ class Program
         var credentials = ui.GetUserCredentials();
         User user = new User(credentials.username, credentials.password);
 
-        Console.WriteLine("\nLogging in...");
+        
         bool loginResult = await user.LoginAsync(baseUrl);
         ui.DisplayLoginResult(loginResult);
 
@@ -27,41 +27,12 @@ class Program
             try
             {
                 // Sales Order erstellen
-                Console.WriteLine("\n=== SOORDER erstellen ===");
+                SalesOrderInput soInput = new SalesOrderInput();
+                var salesOrder = soInput.GetSalesOrderInput();
 
-                // Kundedaten eingeben
-                Console.Write("Kunden-ID eingeben: ");
-                string customerID = Console.ReadLine();
+                var orderDetail = soInput.GetOrderLineInput();
+                salesOrder.Details.Add(orderDetail);
 
-                Console.Write("Beschreibung für den Auftrag: ");
-                string description = Console.ReadLine();
-
-                var salesOrder = new SOOrder
-                {
-                    OrderType = new ValueField { Value = "SO"},
-                    CustomerID = new ValueField { Value = customerID},
-                    Description = new ValueField { Value = description}
-                };
-
-                // Eine Position (SOLine) hinzufügen
-                Console.WriteLine("\n=== SOLINE hinzufügen ===");
-                Console.Write("Artikelnummer eingeben: ");
-                string inventoryID = Console.ReadLine();
-
-                Console.Write("Menge eingeben: ");
-                string quantity = Console.ReadLine();
-
-                Console.Write("Preis pro Stück: ");
-                string unitPrice = Console.ReadLine();
-
-                salesOrder.Details.Add(new SOOrderDetail
-                {
-                    InventoryID = new ValueField { Value = inventoryID},
-                    Quantity = new ValueField { Value = quantity},
-                    UnitPrice = new ValueField { Value = unitPrice}
-                });
-
-                // Sales Order anlegen
                 Console.WriteLine("\nErstelle Sales Order...");
                 bool createResult = await user.CreateSalesOrderAsync(salesOrder);
 
@@ -79,7 +50,6 @@ class Program
                 Console.WriteLine("\nLogging out...");
                 await user.LogoutAsync();
             }
-            //Console.WriteLine("Login successful!");
         }
         else
         {
