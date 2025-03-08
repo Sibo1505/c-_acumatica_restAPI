@@ -1,5 +1,6 @@
 using System;
 using AcumaticaApiClient.Models;
+using AcumaticaApiClient.Utils;
 
 namespace AcumaticaApiClient.UI
 {
@@ -12,8 +13,8 @@ namespace AcumaticaApiClient.UI
             Console.WriteLine("\n=== SOORDER erstellen ===");
 
                 // Kundedaten eingeben
-                string customerID = CheckInput("Kunden-ID eingeben: ");
-                string description = CheckInput("Beschreibung für den Auftrag: ");
+                string customerID = InputHelper.CheckInput("Kunden-ID eingeben: ");
+                string description = InputHelper.CheckInput("Beschreibung für den Auftrag: ");
 
                 return new SOOrder
                 {
@@ -28,9 +29,9 @@ namespace AcumaticaApiClient.UI
         {
             Console.WriteLine("\n=== SOLINE hinzufügen ===");
 
-                string inventoryID = CheckInput("Artikelnummer eingeben: ");
-                string quantity = CheckInput("Menge eingeben: ");
-                string unitPrice = CheckInput("Preis pro Stück: ");
+                string inventoryID = InputHelper.CheckInput("Artikelnummer eingeben: ");
+                string quantity = InputHelper.CheckInput("Menge eingeben: ");
+                string unitPrice = InputHelper.CheckInput("Preis pro Stück: ");
 
                 return new SOOrderDetail
                 {
@@ -38,17 +39,6 @@ namespace AcumaticaApiClient.UI
                     OrderQty = new ValueField { Value = quantity},
                     UnitPrice = new ValueField { Value = unitPrice}
                 };
-        }
-
-        private string CheckInput(string request)
-        {
-        string input;
-        do
-        {
-            Console.Write(request);
-            input = Console.ReadLine()?.Trim();
-        } while (string.IsNullOrEmpty(input));
-        return input;
         }
     }
 }

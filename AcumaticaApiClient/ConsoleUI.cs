@@ -1,5 +1,6 @@
 using System;
 using System.Threading.Tasks;
+using AcumaticaApiClient.Utils;
 
 namespace AcumaticaApiClient.UI
 {
@@ -11,8 +12,8 @@ namespace AcumaticaApiClient.UI
             Console.WriteLine("\nLogging in...");
 
             // Zugangsdaten
-            string username = GetValidatedInput("Benutzername: ");
-            string password = GetValidatedInput("Passwort: ");
+            string username = InputHelper.CheckInput("Benutzername: ");
+            string password = InputHelper.CheckInput("Passwort: ");
 
             return (username, password);
         }
@@ -21,17 +22,6 @@ namespace AcumaticaApiClient.UI
         public void DisplayLoginResult(bool loginStatus)
         {
             Console.WriteLine(loginStatus ? "Login erfolgreich!" : "Login fehlgeschlagen!");
-        }
-
-        private string GetValidatedInput(string prompt)
-        {
-            string input;
-            do
-            {
-                Console.Write(prompt);
-                input = Console.ReadLine()?.Trim();
-            } while (string.IsNullOrEmpty(input));
-            return input;
         }
     }
 }
