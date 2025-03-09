@@ -7,12 +7,11 @@ namespace AcumaticaApiClient.UI
     // Diese Klasse stellt die Benutzeroberfläche für die erstellung einer Sales Order bereit
     public class SalesOrderInput
     {
+        // Diese Funktion erfasst die Daten für eine Sales Order
         public SOOrder GetSalesOrderInput()
         {
-            // Kundendaten eingeben
             Console.WriteLine("\n=== SOORDER erstellen ===");
 
-                // Kundedaten eingeben
                 string customerID = InputHelper.CheckInput("Kunden-ID eingeben: ");
                 string description = InputHelper.CheckInput("Beschreibung für den Auftrag: ");
 

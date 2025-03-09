@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AcumaticaApiClient")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+77a89423c3c9279d5ffd2acaf5210173c318d9bb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e311cd04e63521956b0e22f6f0dd921f313e9766")]
 [assembly: System.Reflection.AssemblyProductAttribute("AcumaticaApiClient")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AcumaticaApiClient")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
