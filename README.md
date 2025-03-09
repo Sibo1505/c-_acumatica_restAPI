@@ -1,2 +1,3 @@
 # c-_acumatica_restAPI
-#test
+# username: admin
+# password: admin

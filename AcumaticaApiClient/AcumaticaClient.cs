@@ -76,7 +76,7 @@ public class User
 
         var salesorder_endpoint = $"{_baseUrl}/entity/Default/24.200.001/SalesOrder";
         var json = JsonSerializer.Serialize(order); // Konvertiert das SOOrder-Objekt in JSON
-        var content = new StringContent(json, Encoding.UTF8, "application/json"); // Packt das JSON in den HTTP-Content, um es an den Server zu senden
+        var content = new StringContent(json, Encoding.UTF8, "application/json");
 
         // Sendet die Anfrage an den Server, um die Verkaufsbestellung zu erstellen
         using var response = await _httpClient.PutAsync(salesorder_endpoint, content);

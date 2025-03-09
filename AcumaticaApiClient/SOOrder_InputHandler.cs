@@ -4,7 +4,7 @@ using AcumaticaApiClient.Utils;
 
 namespace AcumaticaApiClient.UI
 {
-    // Diese Klasse stellt die Benutzeroberfläche für die erstellung einer Sales Order bereit
+    // Diese Klasse stellt die Benutzeroberfläche für die Erstellung einer Sales Order bereit
     public class SalesOrderInput
     {
         // Diese Funktion erfasst die Daten für eine Sales Order
